@@ -1,0 +1,11 @@
+1. Gerenciador de Servidor
+
+2. Ferramentas
+
+3. Usuários e Computadores do AD
+
+4. Selecione o Domínio
+
+5. O Usuário criado irá aparecer ao clicar no server, pois não foi atribuído a nenhum outro lugar até o momento
+
+6. Clique na pasta Computers para visualizar o Computador que foi adicionado.

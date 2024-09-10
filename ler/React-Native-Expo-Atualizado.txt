@@ -1,0 +1,349 @@
+ATUALIZAÇÃO DO EXPO - Documentação -> https://expo.dev/
+
+
+Criação do Projeto 
+	-> npx creacte-expo-app nome_projeto
+
+Acessar o Projeto 
+
+Pra utilizar menos arquivos
+	-> npm run reset-project
+
+Executar o Projeto
+	-> npx expo start
+
+Para visualização do navegador não precisa instalar dependências...
+
+
+
+
+
+----------------------------------------
+
+Navegação entre as Páginas - https://docs.expo.dev/router/navigating-pages/
+
+
+https://expo.dev/ -> DOCS -> GUIDES (GUIA) -> EXPO ROUTER - NAVIGATE BETEWEEN PAGES
+
+https://docs.expo.dev/router/navigating-pages/
+
+- Expo Router usa "links" para navegar entre as páginas do aplicativo. Isso é conceitualmente semelhante ao modo como a web funciona com <a>tags e hrefatributos.
+- No exemplo a seguir, existem dois <Link />componentes que navegam para rotas diferentes.
+
+EXEMPLO DOCUMENTAÇÃO
+
+**********
+
+import { View } from 'react-native';
+
+import { Link } from 'expo-router';
+
+export default function Page() {
+  return (
+    <View>
+      <Link href="/about">About</Link>
+      {/* ...other links */}
+      <Link href="/user/bacon">View user</Link>
+    </View>
+  );
+}
+
+************
+
+
+O componente Link agrupa os filhos em um <Text>componente por padrão; isso é útil para acessibilidade, mas nem sempre desejado. Você pode personalizar o componente passando o asChildprop, que encaminhará todos os props para o primeiro filho do Linkcomponente. O componente filho deve suportar os adereços onPresse e também será transmitido.onClickhrefrole
+
+
+**********
+
+import { Pressable, Text } from "react-native";
+import { Link } from "expo-router";
+
+export default function Page() {
+  return (
+    <Link href="/other" asChild>
+      <Pressable>
+        <Text>Home</Text>
+      </Pressable>
+    </Link>
+  );
+}
+
+
+**********
+
+
+Compreendendo a navegação nativa
+Expo Router usa uma abordagem de navegação baseada em pilha. Cada nova rota que você navega é adicionada a uma pilha. Se você navegar por uma rota que já está na pilha, a pilha retornará à rota existente.
+
+Por exemplo, quando você navega de /feedpara /profile, a pilha contém /feede /profile. Se você navegar para /settings, a pilha conterá /feed, /profilee /settings. Se você navegar de volta para /feed, a pilha retornará para /feed.
+
+Compreendendo a navegação nativa
+Expo Router usa uma abordagem de navegação baseada em pilha. Cada nova rota que você navega é adicionada a uma pilha. Se você navegar por uma rota que já está na pilha, a pilha retornará à rota existente.
+
+Por exemplo, quando você navega de /feedpara /profile, a pilha contém /feede /profile. Se você navegar para /settings, a pilha conterá /feed, /profilee /settings. Se você navegar de volta para /feed, a pilha retornará para /feed.
+
+
+
+Rotas Dinâmicas
+
+
+Rotas dinâmicas e parâmetros de consulta podem ser fornecidos estaticamente ou com o objeto Href de conveniência .
+
+
+*************
+
+import { Link } from 'expo-router';
+
+
+export default function Page() {
+  return (
+    <View>
+      <Link
+        href={{
+          pathname: "/user/[id]",
+          params: { id: 'bacon' }
+        }}>
+          View user
+        </Link>
+    </View>
+  );
+}
+
+*************
+
+---------------------------------------
+
+app_Restaurante
+
+Criação do Projeto com a versão atualizada do EXPO
+
+1. npx create-expo-app app_restaurante
+
+2. cd app_restaurante
+
+3. Executar o Comando para diminuir a quantidade  de  arquivos do  projeto  inicial
+	-> npm run reset-project
+
+obs: Deverá ser inserido as imagens do projeto dentro do diretório assets/images/food
+
+1. Edição do arquivo app/index.js
+
+
+
+*******
+
+import { Text, View, Pressable } from "react-native";
+import { Link } from "expo-router";
+
+export default function Index() {
+  return (
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Text> App Restaurante </Text>
+      <Link href="/about"  asChild>
+        <Pressable>
+          <Text>About</Text>
+        </Pressable>
+      </Link>
+
+      <Link href="/menu"  asChild>
+        <Pressable>
+          <Text>Menu</Text>
+        </Pressable>
+      </Link>
+
+    </View >
+  );
+}
+
+
+
+1. Crie um novo arquivo dentro de app
+	-> about.js
+
+*******
+
+import { Text, View } from "react-native";
+
+export default function About() {
+  return (
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Text>About</Text>
+    </View>
+  );
+}
+
+******
+
+2.Edição  do   arquivo  _layout
+
+*****
+import { Stack } from "expo-router";
+
+export default function RootLayout() {
+
+  return (
+    <Stack>
+      <Stack.Screen name="index" options={{ title: 'Home Screen' }} />
+      <Stack.Screen name="about" options={{ title: 'About Screen' }} />
+      <Stack.Screen name="menu" options={{ title: 'Menu Screen' }} />
+      <Stack.Screen name="menusingle/[id]" options={{ title: 'Single Screen' }} />
+    </Stack>
+  );
+}
+
+
+3. Crie um diretório "json" com o arquivo "menu.json":
+
+menu.json
+
+*******
+{
+    "food": [
+    {
+        "idf": 1,
+        "title": "Prato do dia",
+        "description": "Arroz branco, Feijão, Filé de frango grelhado ou carne de panela com legumes, Batatas fritas, Ovo cozido (opcional), Salada de folhas verdes",
+        "image" : "../assets/images/food/food-1.jpg"
+    },
+    {
+        "idf": 2,
+        "title": "Espetinho - Alcatra",
+        "description": "Carne, Arroz, Fritas, Alface, Tomate",
+        "image" : "../assets/images/food/food-2.jpg"
+    }
+    ], 
+    "work" : [
+        {
+            "wid" : 1,
+            "wtitle" : " Organizar Cozinha"
+        }
+    ]
+}
+
+
+4. Edição do arquivo app/menu.js (Esse arquivo de menu é o cardápio)
+
+*********
+
+import React from 'react'
+import { Link } from "expo-router";
+import { Text, View, StyleSheet } from 'react-native'
+import menujson from '../json/menu.json';
+
+export default function Menu() {
+    return (
+        <View style={styles.container}>
+            <Text style={styles.title}> Menu </Text>
+            {menujson.food.map((json) => {
+                return [
+                    <Link key={json.idf}
+                        href={{
+                            pathname: "/menusingle/[id]",
+                            params: { id: json.idf }
+                        }} >
+                        {json.title}
+                    </Link>
+                ]
+            })}
+        </View>
+    )
+}
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    title: {
+        color: 'red',
+    },
+});
+
+
+5. Criação do diretório app/menusingle (Dentro do diretório menu single terá o arquivo [id].js) para a página single do projeto
+
+Criação do arquivo [id].js
+
+Edição do arquivo [id].js
+
+*********
+
+
+import React from 'react'
+import { Text, View, StyleSheet, Image } from 'react-native'
+import { useLocalSearchParams } from 'expo-router'
+import menujson from '../../json/menu.json'
+
+export default function MenuSingle() {
+    const { id } = useLocalSearchParams();
+    const data = menujson.food.find(
+        (item) => item.idf == id)
+    console.log(data)
+
+    return (
+        <View style={styles.container}>
+            <Text style={styles.title}> Movie </Text>
+            {/* <Text> {id} </Text> */}
+            <Text> {data.idf} </Text>
+            <Text> {data.title} </Text>
+            <Text> {data.description} </Text>
+            <Image
+                style={{ width: 200, height: 200 }}
+                source={{ uri: data.image }}
+            />
+        </View>
+    )
+}
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    title: {
+        color: 'red',
+    },
+});
+
+------------------------------------------------
+
+app_burguer
+
+
+Criação do Projeto 
+	-> npx create-expo-app app_burguer
+
+-> Acessar o Projeto 
+
+Pra utilizar menos arquivos
+	-> npm run reset-project
+
+Executar o Projeto
+	-> npx expo start
+
+Para visualização do navegador não precisa instalar dependências...
+
+
+
+
+
+
+
+
+
+
+

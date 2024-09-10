@@ -1,0 +1,19 @@
+Configurações INICIAIS
+	** Ip fixo no Servidor
+	** Nome do Server
+
+
+1. Menu Iniciar
+2. Gerenciador de Servidores
+3. (Menu) Gerenciar
+4. Adicionar Funções e Recursos
+	Selecionar Funções e Recursos - Active Director Domain Server e DNS Server 
+5. (Assistente de Instalação)
+	5.1 Próximo
+	5.2 Instalação Baseada em Funções - Próximo
+	5.3 Selecionar um Servidor no Pool de Servidor - Próximo
+6. Funções do Servidor
+	Serviço de Domínio do Active Diretor - Adicionar Recursos
+7. (Recursos) - Próximo
+8. AD DS - Próximo
+9. Confirmação - Instalar

@@ -1,0 +1,86 @@
+UC11 - TESTE E IMPLANTAÇÃO DE SOFTWARE
+Teste de software é Garantir / Validar / Verificar que o sistema está apto a executar todos os tipos de solicitações sob os mais diversos aspectos e cenários
+
+-------------------------------
+
+Para Testar é preciso PROGRAMAR O SOFTWARE
+
+---------------------------
+PHP - Linguagem de Programação
+
+1º Abra o xampp e starte o apache (Servidor Web)
+2º Crie uma pasta (Projeto) no C:\xampp\htdocs
+3º Vincule o projeto no Visual Studio Code
+	- Abra o Visual Studio Code
+	- Menu File -> ADD FOLDER TO WORKSPACE -> Selecione o projeto no
+C:\xampp\htdocs\projeto_criado
+
+-----------------------------
+
+Criação de arquivo php
+
+1. Botão direito na pasta do projeto no VSC -> New File -> Renomeie o arquivo para index.php
+
+------------------------------
+
+<?php
+// print, echo serve para imprimir algo na tela
+// print("Hello World");
+echo "<h2 style='color: red;' > Hello World </h2>";
+echo "<a target='_blank' href='http://www.google.com.br'> Google </a>";
+?>
+
+
+
+-----------------------------
+
+HTML - LINGUAGEM DE MARCAÇÃO
+CSS - LINGUAGEM DE ESTILO
+PHP - LINGUAGEM DE PROGRAMAÇÃO
+JS - LINGUAGEM DE PROGRAMAÇÃO
+
+---------------------------
+
+1. Crie uma pasta no HTDOCS com o nome app-login
+	C:\xampp\htdocs
+
+2. Vincule o projeto criado ao Visual Studio Code
+	- Abra o Visual Studio Code
+	- Menu -> File -> Add Folder to Workspace -> "Procurar o projeto" -> Add
+
+3. Crie os arquivos: 
+	- index.php 
+	- logar.php 
+	- style.css
+
+4. Inicie a codificação no arquivo index.php com o comando "! + enter"
+
+5. Crie o formulário no arquivo index.php
+
+6. Vincule o arquivo css ao arquivo html
+	-> <link rel="stylesheet" href="style.css">
+
+7. Inserir imagens
+	Existem 2 formas para inserir imagem no documento html
+	1. Através da tag "img"
+	2. Através da propriedade css -> "background-image"
+
+	via background-image
+
+	1º Selecione uma imagem na internet -> Pesquise por "background" + categoria da imagem. Ex: background tecnology
+
+	2º Crie uma pasta no projeto "img" para guardar as imagens
+
+
+--------------------------------------------------
+
+
+$email = filter_input(INPUT_POST, 'email', FILTER_DEFAULT)
+
+
+
+
+
+
+
+

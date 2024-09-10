@@ -1,0 +1,1591 @@
+
+
+Criar Novo Projeto
+	-> Aplicativo de Console (.NET Framework)
+
+
+***********************
+using -> São os módulos ou pacotes da linguagem
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
+}
+
+
+
+***********************
+
+
+-----------------------------------------------------------------------------
+
+********************************
+
+Adição (+): Utilizado para somar dois valores.
+int resultado = 5 + 3; // resultado será 8
+
+Subtração (-): Utilizado para subtrair um valor de outro.
+int resultado = 10 - 4; // resultado será 6
+
+Multiplicação (*): Utilizado para multiplicar dois valores.
+int resultado = 6 * 4; // resultado será 24
+
+Divisão (/): Utilizado para dividir um valor pelo outro.
+int resultado = 20 / 5; // resultado será 4
+
+Módulo (%): Retorna o resto da divisão entre dois valores.
+int resultado = 10 % 3; // resultado será 1 (pois 10 dividido por 3 é 3 e sobra 1)
+
+Incremento (++): Utilizado para aumentar o valor de uma variável em 1.
+int contador = 5;
+contador++; // Agora contador é igual a 6
+
+Decremento (--): Utilizado para diminuir o valor de uma variável em 1.
+int contador = 5;
+contador--; // Agora contador é igual a 4
+
+Operador de Negativo (-): Utilizado para negar um valor.
+int numero = 10;
+int resultado = -numero; // resultado será -10
+
+----------------------------
+
+
+Estrutura Condicional (if-else):
+
+if (idade >= 18)
+{
+    Console.WriteLine("Você é maior de idade.");
+}
+else
+{
+    Console.WriteLine("Você é menor de idade.");
+}
+
+
+-----------------------------
+
+
+Estrutura de Repetição (for):
+
+for (int i = 0; i < 5; i++)
+{
+    Console.WriteLine(i);
+}
+
+
+-----------------------------
+
+
+Array:
+
+int[] numeros = new int[5]; // Cria um array de inteiros com tamanho 5
+numeros[0] = 10;
+numeros[1] = 20;
+// E assim por diante...
+
+
+-----------------------------
+
+
+Métodos:
+
+// Declaração de um método
+void ExibirMensagem()
+{
+    Console.WriteLine("Olá, mundo!");
+}
+
+// Chamada do método
+ExibirMensagem();
+
+
+-----------------------------
+
+
+Classes e Objetos:
+
+// Declaração da classe
+class Pessoa
+{
+    public string nome;
+    public int idade;
+
+    public void Apresentar()
+    {
+        Console.WriteLine("Olá, meu nome é " + nome + " e tenho " + idade + " anos.");
+    }
+}
+
+// Criação de um objeto
+Pessoa pessoa1 = new Pessoa();
+pessoa1.nome = "Maria";
+pessoa1.idade = 30;
+pessoa1.Apresentar();
+
+
+
+-----------------------------
+
+Concatenação de Strings: 
+
+string nome = "João";
+string sobrenome = "Silva";
+string nomeCompleto = nome + " " + sobrenome;
+
+Interpolação de Strings: 
+
+string nome = "João";
+string sobrenome = "Silva";
+string nomeCompleto = $"{nome} {sobrenome}";
+
+
+Método PadLeft e PadRight: 
+
+string texto = "123";
+string textoPreenchido = texto.PadLeft(5, '0'); // Resultado: "00123"
+
+ToUpper e ToLower:
+string texto = "Olá Mundo!";
+string textoMaiusculo = texto.ToUpper(); // Resultado: "OLÁ MUNDO!"
+string textoMinusculo = texto.ToLower(); // Resultado: "olá mundo!"
+
+Trim:
+string texto = "   Olá Mundo!   ";
+string textoTrimmed = texto.Trim(); // Resultado: "Olá Mundo!"
+
+
+
+
+------------------------------------------------------------------------------
+
+********************************
+
+AULA 1 - Criação do Projeto no Visual Studio
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            /*Console.WriteLine("Olá Gente Boa!!!");
+            Console.WriteLine("Olá Mundo");
+            Console.Write("Olá Mundo");
+            Console.Write("Olá Mundo");
+            Console.Write("Olá  \n Mundo");
+            Console.Write("Olá \n Mundo");*/
+
+            /*
+            int idade = 10;
+            Console.WriteLine(idade);
+            Console.WriteLine("Sua idade é: " + idade);
+            string nome = "Nelci Mariano";
+            Console.WriteLine(nome);
+            Console.WriteLine("Seu Nome é: " + nome);
+            */
+
+            /*
+            Console.WriteLine("Digite o seu nome: ");
+            string nome_completo = Console.ReadLine();
+            Console.WriteLine("Nome: " + nome_completo);
+            */
+
+            // Tipo de Dado
+            // int intervalo de número de: -2.147.483.648 a 2.147.483.647.
+            // long abrange uma faixa maior
+            /*int cpf = 36892799823;
+            long cnpj = 368927998424466;
+            Console.WriteLine(cnpj);*/
+
+            /*
+            string nome_completo;
+            Console.WriteLine("Digite o seu nome: ");
+            nome_completo = Console.ReadLine();
+            Console.WriteLine("Nome: " + nome_completo);
+            */  
+            /*
+            int idade = 30;
+            float altura = 1.75f;
+            bool isAdulto = true;
+            char setor = 'D';
+            string nome = "João";
+            */
+	
+	/*	
+            Console.WriteLine("Digite um número inteiro:");
+            int numero = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Número: " + numero);
+
+	*/
+        }
+    }
+}
+
+---------------------------------------------------------
+
+-----------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------
+
+Projeto: Aplicativo de Console (.NET Framework)
+
+Classes no C# - As classes possuem 3 modificadores de acesso 
+	- internal
+	- public
+	- private - Não pode ser criado dentro do namespace, tem que ser criada dentro de outra classe
+
+
+
+******************
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Criando_classes_2;
+
+//MODIFICADOR_DE_ACESSO class NOME_DA_CLASSE { }
+//Modificadores de acesso
+//internal (interno) - A nossa classe só poderá ser acessada pelo nosso assembly
+//public (público) - O uso da nossa classe é livre
+//private (privado) - A nossa classe só poderá ser acessada internamente ao bloco de código que a criou
+
+namespace Criando_classes
+{
+    internal class Carro_Internal
+    {
+        Carro_Public meuCarroPublic = new Carro_Public();
+    }
+    public class Carro_Public
+    {
+        Carro_Internal meuCarroInternal = new Carro_Internal();
+        //Não temos acesso a classe Carro_Private porque ela é privada (private)
+        //Program.Carro_Private meuCarroPrivate = new Program.Carro_Private();
+    }
+
+    internal class Program
+    {
+        //Só podemos criar classes privadas dentro de outras classes!!!!!
+        private class Carro_Private
+        {
+
+        }
+        static void Main(string[] args)
+        {
+            //NOME_DA_CLASSE NOME_DO_OBJETO = new NOME_DA_CLASSE(PARAMETROS);
+            Carro_Internal meuCarroInternal = new Carro_Internal();
+            Carro_Public meuCarroPublic = new Carro_Public();
+            Carro_Private meuCarroPrivate = new Carro_Private();
+            CarroExterno meuCarroExterno = new CarroExterno();
+        }
+    }
+}
+
+
+--------------------------------------------------------------
+
+POO - Classe, objeto, Método, Atributo
+
+Projeto: Aplicativo de Console (.NET Framework)
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace POO_1_Classe_Obj_Atr_Metodo
+{
+
+    class Aluno
+    {
+        public string nomeAluno;
+        private int idadeAluno; // O atributo idadeAluno privado, não conseguirá ser acessado diretamente pelo objeto pois o acesso do objeto é em outra classe
+
+        public int IdadeAluno
+        {
+            get { return idadeAluno; }
+            set { idadeAluno = value; }
+        }
+    }
+
+    internal class Pessoa
+    {
+        public string nome;
+        private int idade; // Não haverá restrição de acesso neste caso de privado pois o objeto está dentro da classe Pessoa
+
+        public void imprimeNome()
+        {
+            Console.WriteLine(nome);
+        }
+
+
+        static void Main(string[] args)
+        {
+            Pessoa pessoa = new Pessoa();
+            pessoa.nome = "Professor Nelci";
+            Console.WriteLine(pessoa.nome);
+            pessoa.imprimeNome();
+            //Abaixo não ocorrerá erro pois mesmo o método sendo privado, está nessa mesma classe Pessoa
+            pessoa.idade = 1;
+            Console.WriteLine(pessoa.idade);
+
+            Aluno aluno = new Aluno();
+            aluno.nomeAluno = "Maria";
+            Console.WriteLine(aluno.nomeAluno);
+            //Abaixo o objeto não conseguirá acessar o método pois ele é privado e está em outra classe
+            //aluno.idadeAluno = 25;
+            aluno.IdadeAluno = 27;
+            Console.WriteLine(aluno.IdadeAluno);
+
+
+        }
+    }
+}
+
+---------------------------------------------------------------
+
+Aula 2 - POO-1 Somar
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace POO_1
+{
+
+    internal class Calcular
+    {
+        
+        public int x;
+        public int y;
+        public int res;
+
+        public void somar() {
+            res = x + y;
+            Console.WriteLine("Soma: " + res);
+        }
+        
+        static void Main(string[] args)
+        {
+            
+            
+            Calcular calcular = new Calcular();
+            calcular.x = 1;
+            calcular.y = 2;
+            calcular.somar();    
+            
+
+            //Programação Estruturada
+            /*
+            int x = 2;
+            int y = 3;
+            Console.WriteLine(x + y);
+           */
+        }
+    }
+}
+
+
+
+
+
+---------------------------------------------------------
+Aula 3 - POO-Carro
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace POO_2_Carro
+{
+    internal class Carro
+    {
+
+        public string nome;
+        public string velocidade;
+        public bool ligado = false;
+
+        public void ligar()
+        {
+            if (!ligado)
+            {
+                ligado = true;
+                Console.WriteLine("Carro Ligado");
+            }
+            else
+            {
+                Console.WriteLine("Carro já está ligado");
+            }
+        }
+
+        public void desligar()
+        {
+            ligado = false;
+            Console.WriteLine("Carro Desligado");
+        }
+
+        static void Main(string[] args)
+        {
+            Carro carro = new Carro();
+            carro.ligar();
+            carro.ligar();
+            carro.desligar();
+
+        }
+    }
+}
+
+--------------------------------------------------------
+Aula 4 - Otimização do POO-2-Carro 
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace POO_2_Carro
+{
+    internal class Carro
+    {
+        public string nome;
+        public int velocidade;
+        public bool ligado = false;
+
+        public void ligar()
+        {
+            if (!ligado)
+            {
+                ligado = true;
+                Console.WriteLine("O Carro " +nome+ " está ligado");
+            }
+            else
+            {
+                Console.WriteLine("O Carro " +nome+ " já está ligado");
+            }
+        }
+
+        public void desligar()
+        {
+            if (ligado) { 
+                ligado = false;
+                velocidade = 0;
+            Console.WriteLine("O Carro " +nome+ " Desligado");
+            } else {
+                Console.WriteLine("O Carro " +nome+ " já está Desligado");
+            }
+        }
+
+        public void acelerar(int valor)
+        {
+            if (ligado)
+            {
+                this.velocidade = valor;
+            }
+        }
+
+        public void desacelerar(int valor)
+        {
+            if (ligado) { 
+                this.velocidade -= valor;
+            }
+        }
+
+        public void verVelocidade()
+        {
+            Console.WriteLine("A Velocidade do " + nome + " é: " + velocidade + " km/h");
+        }
+
+        static void Main(string[] args)
+        {
+            Carro carro = new Carro();
+            carro.nome = "Pálio Wekeend 2002";
+            carro.ligar();
+            carro.acelerar(50);
+            carro.verVelocidade();
+            carro.desacelerar(20);
+            //carro.ligar();
+            //carro.desligar();
+            carro.verVelocidade();
+            //carro.desligar();
+        }
+    }
+}
+
+
+
+----------------------------------------------------------------
+POO-2-Calculo
+
+Projeto: Aplicativo de Console (.NET Framework)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace POO_2_Calculo
+{
+    internal class Calculo
+    {
+        public float x, y, res;
+
+        public void somar()
+        {
+            res = x + y;
+            Console.WriteLine("Soma: " + res);
+        }
+        static void Main(string[] args)
+        {
+            Calculo calculo = new Calculo();
+            calculo.x = 2;
+            calculo.y = 3;
+            calculo.somar();
+
+        }
+    }
+}
+
+
+
+
+
+----------------------------------------------------------------
+
+POO_3_Varias_classes
+
+Neste projeto eu criei com -> Aplicativo de Console (.NET Framework) e após criado, cliquei no projeto com botão direito do mouse -> adicionar -> classe
+
+// classe Aluno
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace POO_3_Varias_classes
+{
+    internal class Aluno
+    {
+        public string nomeAluno;
+        public int idadeAluno;
+
+        public void imprimirDados()
+        {
+            Console.WriteLine("Nome: " + nomeAluno + " Idade: " + idadeAluno);
+        }
+    }
+}
+
+
+*********
+
+//Classe Professor
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace POO_3_Varias_classes
+{
+    internal class Professor
+    {
+        public string nomeProfessor;
+        public int idadeProfessor;
+
+        public void imprimirDados()
+        {
+            Console.WriteLine("Nome: " +nomeProfessor+ " Idadae: " +idadeProfessor);
+        }
+    }
+}
+
+
+*********
+
+//Classe Principal com o método Main
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace POO_3_Varias_classes
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Aluno aluno = new Aluno();
+            aluno.nomeAluno = "Maria";
+            aluno.idadeAluno = 10;
+            aluno.imprimirDados();
+
+            Professor professor = new Professor();
+            professor.nomeProfessor = "Nelci Mariano";
+            professor.idadeProfessor = 35;
+            professor.imprimirDados();
+        }
+    }
+}
+
+
+
+----------------------------------------------------------------
+
+POO-4-Heranca
+Neste projeto eu criei com -> Aplicativo de Console (.NET Framework) e após criado, cliquei no projeto com botão direito do mouse -> adicionar -> classe
+
+Criei as Classes Pessoa, PessoaFisica e PessoaJuridica
+
+//Class Pessoa
+
+****************
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace POO_4_Heranca
+{
+    internal class Pessoa
+    {
+
+        public string nome;
+
+        public void imprimirNome()
+        {
+            Console.WriteLine("Nome: (class Pessoa) "+nome);
+        }
+    }
+}
+
+
+
+//Class PessoaFisica
+
+****************
+
+
+using System;
+using System.Collections.Generic;
+using System.Data.SqlTypes;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace POO_4_Heranca
+{
+    internal class PessoaFisica : Pessoa
+    {
+        public long cpf;
+
+        public void imprimirCpf()
+        {
+            Console.WriteLine("CPF class PessoaFisica: " + cpf);
+        }
+    }
+}
+
+
+
+
+
+
+//Class PessoaJuridica
+
+****************
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace POO_4_Heranca
+{
+    internal class PessoaJuridica : Pessoa
+    {
+        public long cnpj;
+
+        public void imprimirCnpj()
+        {
+            Console.WriteLine("CNPJ class PessoaJuridica: " + cnpj);
+        }
+    }
+}
+
+
+
+
+
+
+
+//Class Program
+
+****************
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace POO_4_Heranca
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Pessoa pessoa = new Pessoa();
+            pessoa.nome = "Nelci Mariano";
+            pessoa.imprimirNome();
+
+            PessoaFisica pessoaFisica = new PessoaFisica();
+            pessoaFisica.cpf = 12312312312;
+            pessoaFisica.imprimirCpf();
+            //Herança
+            pessoaFisica.nome = "Davi Mariano";
+            pessoaFisica.imprimirNome();
+
+            PessoaJuridica pessoaJuridica = new PessoaJuridica();
+            pessoaJuridica.cnpj = 32165432165432164;
+            pessoaJuridica.imprimirCnpj();
+            //Herança
+            pessoaJuridica.nome = "TW - Soluções em Sistemas";
+            pessoaJuridica.imprimirNome();
+        }
+    }
+}
+
+
+----------------------------------------------------------------
+
+
+----------------------------------------------------------------
+
+
+
+
+Calculadora OO C#
+
+using System;
+
+namespace Calculadora
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Instanciando a calculadora
+            Calculadora calculadora = new Calculadora();
+
+            // Pedindo os números ao usuário
+            Console.Write("Digite o primeiro número: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Digite o segundo número: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+
+            // Menu de operações
+            Console.WriteLine("Escolha a operação:");
+            Console.WriteLine("1 - Soma");
+            Console.WriteLine("2 - Subtração");
+            Console.WriteLine("3 - Multiplicação");
+            Console.WriteLine("4 - Divisão");
+            Console.Write("Opção: ");
+            int opcao = Convert.ToInt32(Console.ReadLine());
+
+            double resultado = 0;
+
+            // Executando a operação selecionada
+            switch (opcao)
+            {
+                case 1:
+                    resultado = calculadora.Somar(num1, num2);
+                    break;
+                case 2:
+                    resultado = calculadora.Subtrair(num1, num2);
+                    break;
+                case 3:
+                    resultado = calculadora.Multiplicar(num1, num2);
+                    break;
+                case 4:
+                    resultado = calculadora.Dividir(num1, num2);
+                    break;
+                default:
+                    Console.WriteLine("Opção inválida!");
+                    break;
+            }
+
+            // Exibindo o resultado
+            Console.WriteLine("Resultado: " + resultado);
+        }
+    }
+
+    // Classe da calculadora
+    class Calculadora
+    {
+        // Método para somar dois números
+        public double Somar(double num1, double num2)
+        {
+            return num1 + num2;
+        }
+
+        // Método para subtrair dois números
+        public double Subtrair(double num1, double num2)
+        {
+            return num1 - num2;
+        }
+
+        // Método para multiplicar dois números
+        public double Multiplicar(double num1, double num2)
+        {
+            return num1 * num2;
+        }
+
+        // Método para dividir dois números
+        public double Dividir(double num1, double num2)
+        {
+            if (num2 != 0)
+            {
+                return num1 / num2;
+            }
+            else
+            {
+                Console.WriteLine("Erro: Divisão por zero!");
+                return double.NaN; // Retorna NaN (Not a Number) em caso de divisão por zero
+            }
+        }
+    }
+}
+
+
+------------------------------------------
+------------------------------------------
+------------------------------------------
+
+Windows Form
+
+Novo Projeto -> Aplicativo do Windows Form
+
+*Menu - Exibir - Caixa de Ferramenta (Será exibido no lado esquerdo da tela)
+
+*Exibir Código e Exibir Design -> Botão direito do mouse sobre o Form.cs -> Exibir Código e Exibir Design
+
+*Propriedades dos controles (botões, forms, inputs) -> clicar na chavinha abaixo de "Gerenciar Soluções" - Será exibido do lado direito da tela
+
+ícone RAIO dentro de propriedades
+*Eventos dos controles -> Clicar no controle (botão, inputs, label...) e clicar no RAIO dentro de *Propriedades
+	-> Para codificar um método de Evento -> Clique duplo no campo ao lado do campo do evento após clicar no raio dentro de Propriedades
+
+ícone de Propriedades
+*Irá exibir as propriedades do controle - cor, tamanho, posição, texto, name...
+
+-------------------------------------------
+
+Inserindo um botão
+Propriedade Text -> onde coloca o texto que será exibido no botão
+Propriedade Name ->
+
+- Evento Click e alterar o texto do botão
+	-  Inserir o comando -> button1.Text = "OK";
+
+
+-------------------------------------------
+
+namespace WindowsForm_1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Altera o texto do botão para "OK"
+            // button1.Text = "OK";
+
+            // Exibe uma mensagem de diálogo
+            //MessageBox.Show("O botão foi clicado!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Altera a cor de fundo do formulário para azul
+            //this.BackColor = Color.Blue;
+
+            // Obtém a hora atual
+            //string horaAtual = DateTime.Now.ToString("HH:mm:ss");
+
+            // Exibe a hora atual em uma caixa de mensagem
+            //MessageBox.Show("A hora atual é: " + horaAtual, "Hora Atual", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Limpa o conteúdo da caixa de texto
+            //textBox1.Text = "";
+
+            // Fecha o formulário
+            // this.Close();
+
+            // Exibe uma mensagem de confirmação
+            //DialogResult result = MessageBox.Show("Você tem certeza que deseja fechar o formulário?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Fecha o formulário se o usuário confirmar
+            /*
+             if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            */
+
+
+        }
+    }
+}
+
+
+
+
+
+
+
+------------------------------------------
+
+
+MESSAGE BOX
+*****************
+
+MessageBox.Show("Mensagem de exemplo", "Título da Caixa de Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+*****************
+
+
+DialogResult result = MessageBox.Show("Deseja salvar as alterações?", "Confirmação", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+if (result == DialogResult.Yes)
+{
+    // Código para salvar as alterações
+}
+
+
+*****************
+
+MessageBox.Show("Ocorreu um erro ao processar a operação. Por favor, tente novamente.", "Erro", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+
+*****************
+
+DialogResult result = MessageBox.Show("Selecione uma opção:", "Escolha", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+if (result == DialogResult.Yes)
+{
+    // Código para a opção sim
+}
+else if (result == DialogResult.No)
+{
+    // Código para a opção não
+}
+else if (result == DialogResult.Cancel)
+{
+    // Código para a opção cancelar
+}
+
+
+*****************
+
+DialogResult result = MessageBox.Show(
+                "Você deseja salvar as alterações?",
+                "Confirmação",
+                MessageBoxButtons.YesNoCancel,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2 // Define o botão padrão como o segundo botão (No)
+                );
+
+            // Verifica a escolha do usuário
+            if (result == DialogResult.Yes)
+            {
+                MessageBox.Show("As alterações foram salvas com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (result == DialogResult.No)
+            {
+                MessageBox.Show("As alterações não foram salvas.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (result == DialogResult.Cancel)
+            {
+                MessageBox.Show("A operação foi cancelada.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+
+*****************
+
+--------------------------------------------------------
+Aula - Otimização do POO-2-Carro 
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace POO_2_Carro
+{
+    internal class Carro
+    {
+        public string nome;
+        public int velocidade;
+        public bool ligado = false;
+
+        public void ligar()
+        {
+            if (!ligado)
+            {
+                ligado = true;
+                Console.WriteLine("O Carro " +nome+ " está ligado");
+            }
+            else
+            {
+                Console.WriteLine("O Carro " +nome+ " já está ligado");
+            }
+        }
+
+        public void desligar()
+        {
+            if (ligado) { 
+                ligado = false;
+                velocidade = 0;
+            Console.WriteLine("O Carro " +nome+ " Desligado");
+            } else {
+                Console.WriteLine("O Carro " +nome+ " já está Desligado");
+            }
+        }
+
+        public void acelerar(int valor)
+        {
+            if (ligado)
+            {
+                this.velocidade = valor;
+            }
+        }
+
+        public void desacelerar(int valor)
+        {
+            if (ligado) { 
+                this.velocidade -= valor;
+            }
+        }
+
+        public void verVelocidade()
+        {
+            Console.WriteLine("A Velocidade do " + nome + " é: " + velocidade + " km/h");
+        }
+
+        static void Main(string[] args)
+        {
+            Carro carro = new Carro();
+            carro.nome = "Pálio Wekeend 2002";
+            carro.ligar();
+            carro.acelerar(50);
+            carro.verVelocidade();
+            carro.desacelerar(20);
+            //carro.ligar();
+            //carro.desligar();
+            carro.verVelocidade();
+            //carro.desligar();
+        }
+    }
+}
+
+
+---------------------------------------------------------
+
+
+
+Aula Juros
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace POO_Calculo_juros
+{
+    internal class Juros
+    {
+        public string nomeCarro;
+        public double valorCarro;
+        public double valorJuros;
+        public double novoValor;
+
+        public void exibirValorJuros()
+        {
+            novoValor = valorJuros * 100;
+            Console.WriteLine("Valor da Porcentagem: " + novoValor);
+        }
+        public void calcularJuros()
+        {
+            novoValor = valorCarro * (1 + valorJuros);
+            Console.WriteLine("O valor do Produto com Juros é de: " + novoValor);
+        }
+        public void desconto()
+        {
+            novoValor = valorCarro * (1 - valorJuros);
+            Console.WriteLine("O valor do Produto com Desconto é de: " + novoValor);
+        }
+
+        static void Main(string[] args)
+        {
+           Juros j = new Juros();
+            j.nomeCarro = "Pálio";
+            j.valorCarro = 100;
+            j.valorJuros = 0.2;
+            j.exibirValorJuros();
+            j.calcularJuros();
+            j.desconto();
+        }
+    }
+}
+
+
+
+***********************************
+
+
+
+
+
+
+
+---------------------------------------------------------
+
+
+
+
+********************************
+
+Adição (+): Utilizado para somar dois valores.
+int resultado = 5 + 3; // resultado será 8
+
+Subtração (-): Utilizado para subtrair um valor de outro.
+int resultado = 10 - 4; // resultado será 6
+
+Multiplicação (*): Utilizado para multiplicar dois valores.
+int resultado = 6 * 4; // resultado será 24
+
+Divisão (/): Utilizado para dividir um valor pelo outro.
+int resultado = 20 / 5; // resultado será 4
+
+Módulo (%): Retorna o resto da divisão entre dois valores.
+int resultado = 10 % 3; // resultado será 1 (pois 10 dividido por 3 é 3 e sobra 1)
+
+Incremento (++): Utilizado para aumentar o valor de uma variável em 1.
+int contador = 5;
+contador++; // Agora contador é igual a 6
+
+Decremento (--): Utilizado para diminuir o valor de uma variável em 1.
+int contador = 5;
+contador--; // Agora contador é igual a 4
+
+Operador de Negativo (-): Utilizado para negar um valor.
+int numero = 10;
+int resultado = -numero; // resultado será -10
+
+----------------------------
+
+
+Estrutura Condicional (if-else):
+
+if (idade >= 18)
+{
+    Console.WriteLine("Você é maior de idade.");
+}
+else
+{
+    Console.WriteLine("Você é menor de idade.");
+}
+
+
+-----------------------------
+
+
+Estrutura de Repetição (for):
+
+for (int i = 0; i < 5; i++)
+{
+    Console.WriteLine(i);
+}
+
+
+-----------------------------
+
+
+Array:
+
+int[] numeros = new int[5]; // Cria um array de inteiros com tamanho 5
+numeros[0] = 10;
+numeros[1] = 20;
+// E assim por diante...
+
+
+-----------------------------
+
+
+Métodos:
+
+// Declaração de um método
+void ExibirMensagem()
+{
+    Console.WriteLine("Olá, mundo!");
+}
+
+// Chamada do método
+ExibirMensagem();
+
+
+-----------------------------
+
+
+Classes e Objetos:
+
+// Declaração da classe
+class Pessoa
+{
+    public string nome;
+    public int idade;
+
+    public void Apresentar()
+    {
+        Console.WriteLine("Olá, meu nome é " + nome + " e tenho " + idade + " anos.");
+    }
+}
+
+// Criação de um objeto
+Pessoa pessoa1 = new Pessoa();
+pessoa1.nome = "Maria";
+pessoa1.idade = 30;
+pessoa1.Apresentar();
+
+
+
+-----------------------------
+
+Concatenação de Strings: 
+
+string nome = "João";
+string sobrenome = "Silva";
+string nomeCompleto = nome + " " + sobrenome;
+
+Interpolação de Strings: 
+
+string nome = "João";
+string sobrenome = "Silva";
+string nomeCompleto = $"{nome} {sobrenome}";
+
+
+Método PadLeft e PadRight: 
+
+string texto = "123";
+string textoPreenchido = texto.PadLeft(5, '0'); // Resultado: "00123"
+
+ToUpper e ToLower:
+string texto = "Olá Mundo!";
+string textoMaiusculo = texto.ToUpper(); // Resultado: "OLÁ MUNDO!"
+string textoMinusculo = texto.ToLower(); // Resultado: "olá mundo!"
+
+Trim:
+string texto = "   Olá Mundo!   ";
+string textoTrimmed = texto.Trim(); // Resultado: "Olá Mundo!"
+
+
+---------------------------------------
+Captura de Dado do input
+
+//Inteiro
+ double valor1 = double.Parse(textBox1.Text);
+
+//string nome =  textBox1.Text;
+
+---------------------------------------
+
+
+Método DataTable que calcula o que tiver a expressão
+
+string expressao = "(4+3+2+5*5-10/2)";
+double resultado = Convert.ToDouble(new DataTable().Compute(expressao, ""));
+Console.WriteLine("Resultado: " + resultado);
+
+
+----------------------------------------
+
+Calculadora com POO com 2 campos
+
+Foi adicionado um arquivo do tipo class
+
+*************
+Código da Classe
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WF_SOMAR
+{
+    internal class Calcular
+    {
+        public double valor1, valor2, soma;
+        public double Somar()
+        {
+            soma = valor1 + valor2;
+            return soma;
+        }
+    }
+}
+
+*************
+
+Código do botão calcular no Window Form
+
+Calcular c = new Calcular();
+c.valor1 = int.Parse(textBox1.Text);
+c.valor2 = Convert.ToDouble(textBox2.Text);
+resultado.Text =  c.Somar().ToString();
+
+-------------------------------------------
+
+
+
+namespace WF_SOMAR
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double x, y, res;
+                       
+              if (string.IsNullOrEmpty(cxText1.Text) || string.IsNullOrEmpty(cxText2.Text))
+            {
+                MessageBox.Show("Preencha todos os Campos! ", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                x = double.Parse(cxText1.Text);
+                y = double.Parse(cxText2.Text);
+                res = x + y;
+                lbResultado.Text = res.ToString();
+            } 
+             
+             
+            /*
+            Calcular c = new Calcular();
+            c.valor1 = double.Parse(textBox1.Text);
+            c.valor2 = double.Parse(textBox2.Text);
+            resultado.Text =  c.Somar().ToString();
+            */
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            double x = double.Parse(cxText1.Text);
+            double y = Convert.ToDouble(cxText2.Text);
+            double res = x - y;
+            lbResultado.Text = res.ToString();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            double x = double.Parse(cxText1.Text);
+            double y = Convert.ToDouble(cxText2.Text);
+            double res = x / y;
+            lbResultado.Text = res.ToString();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            double x = double.Parse(cxText1.Text);
+            double y = Convert.ToDouble(cxText2.Text);
+            double res = x * y;
+            lbResultado.Text = res.ToString();
+        }
+    }
+}
+
+
+
+---------------------------------------
+
+Calculadora com Botões -> 1, 2, 3, 4... + - / *
+
+Abaixo foi criado o Windows Form com os botões da calculadora
+
+*************
+
+using System.Data;
+using System.Linq.Expressions;
+
+namespace WF_Calculadora
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void AtualizarVisor(string texto)
+        {
+            visor.Text = texto;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUm_Click(object sender, EventArgs e)
+        {
+            AtualizarVisor(visor.Text + 1);
+        }
+
+        private void btnDois_Click(object sender, EventArgs e)
+        {
+            AtualizarVisor(visor.Text + 2);
+        }
+
+        private void btnSomar_Click(object sender, EventArgs e)
+        {
+            AtualizarVisor(visor.Text + "+");
+        }
+
+        private void btnIgual_Click(object sender, EventArgs e)
+        {
+            double resultado = Convert.ToDouble(new DataTable().Compute(visor.Text, ""));
+            visor.Text = resultado.ToString();
+        }
+    }
+}
+
+
+
+---------------------------------
+
+
+WF-POO - Verificação de campo vazio com Orientação a Objetos
+
+namespace WF_POO
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Instanciar a Classe -> Criar o objeto
+            PrimeiraClasse primeiraclasse = new PrimeiraClasse();
+            primeiraclasse.nome = textBox1.Text;
+            primeiraclasse.exibirNomeLabel(label2);
+        }
+    }
+
+    internal class PrimeiraClasse
+    {
+        //ATRIBUTOS - VARIÁVEIS - CARACTERÍSTICAS
+        public string nome;
+
+        //MÉTODOS - AÇÕES
+        public void exibirNomeLabel(Label label2)
+        {
+            if (checkNome())
+            {
+                //MessageBox.Show("Nome: " +nome, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                label2.Text = nome;
+            } else
+            {
+               MessageBox.Show("Campo Vazio", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        public bool checkNome()
+        {
+            if(!string.IsNullOrEmpty(nome))
+            {
+                return true;
+            }
+            return false;
+        }
+    }
+}
+
+
+----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

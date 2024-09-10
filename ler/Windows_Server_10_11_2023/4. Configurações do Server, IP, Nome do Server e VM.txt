@@ -1,0 +1,28 @@
+1. Altere as configurações do Virtual Box WS 2019 - Configurações VM WS2019 
+-> Rede -> Adaptador 1 -> Conectado a Rede Interna > nome intnet
+-> Rede -> Adaptador 2 -> Modo Bridge -> Escolha a placa (Wifi ou ETHERNET)
+
+---------------------------------------------
+
+2A. WS 2019 - Configuração de IP
+	IP: 192.168.1.1
+	Mask: 255.255.255.0
+	Gatway:
+
+	DNS: 127.0.0.1 (Própio ip do AD)
+
+-----------------------------
+
+3A. Renomear o Computador
+	
+-> Server Manager
+-> Computer Name -> Change
+
+OU
+
+3B. Alteração do Nome da Máquina no Windows Server
+
+	Abra o Explorador de arquivos -> botão direito em meu computador -> propriedades -> Configurações avançadas do sistema -> Nome do Computador -> Alterar
+
+-----------------------------------
+

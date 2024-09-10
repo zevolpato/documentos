@@ -1,0 +1,55 @@
+
+DNS
+DOMAIN NAME SYSTEM - SISTEMA DE NOMES DE DOMÍNIO
+Traduz nomes do domínio (Ex: www.example.com) em endereços IP. Ele associa nomes de domínio a endereços IPs através de sua RESOLUÇÃO DE NOMES
+
+ZONA DNS NO WINDOWS SERVER
+
+Uma Zona DNS no Windows Server é uma área específica de autoridade para um domínio que contem informações sobre o mapeamento entre nomes de domínio e endereços IP
+
+Zona primária - Contém registros de DNS Autoritativos para um domínio
+Zona secundária - Contém um cópia da Zona primária
+
+
+--------------------
+DHCP
+
+Gerenciar -> add funções e recursos -> Instalação baseasda em função
+-> Selecionar o Servidor.... -> Selecionar a opção DHCP Server -> Adicionar Recursos
+-> ... -> ... > Instalar
+
+Instalação Concluída
+
+-----------------------------
+Configuração pós instalação DHCP
+
+----------------------------
+
+Configuração do DHCP
+
+Ferramentas -> DHCP -> Botão Direito no server-ad.serverlab10.com -> autorizar
+-> Botão direito no ipv4 -> Novo escopo -> Nome, Descrição
+-> Ip Inicial, Ip Final, comprimento, sub-rede
+-> Adicionar Exclusões (Ips dentro do range)
+-> Duração da concessão - 8 HORAS
+-> Configurar opções agora
+-> Especificar roteadores - VAZIO
+-> Servidor de nome de domínio e DNS - *** INSERIR O IP DO SERVIDOR DNS
+-> Servidores Wins - VAZIO
+-> Ativar Escopo Agora
+
+
+---- Podem ser criados vários escopos. A definição do DHCP nas máquinas clientes dependem da configuração de rede da placa do Server. 
+
+
+Atividades -
+
+- Crie 2 Escopos com redes diferentes Ex: 10.1.1.0 e 192.168.1.0
+- Para a atribuição do IP na máquina cliente, é necessário reiniciar a máquina cliente.
+- Execute no servidor a PAUSA, REINIALIZAÇÃO E PARADA COMPLETA DO DHCP, efetue os testes na máquina cliente
+- Clique no Escopo e veja as concessões ativas (Computadores que estão recebendo o DHCP)
+- Veja as propriedades do escopo -> botão direito sobre o escopo -> propriedades
+- Criação de Reserva para que o possa ser reservado um ip específico para a máquina de acordo com o endereço MAC
+
+
+

@@ -1,0 +1,19 @@
+Botão direito do mouse sobre o usuário
+
+- Copiar -> Copia as informações de Trabalho do Usuário (Elementos Comuns)
+- Adicionar a um grupo ->
+- Desativar conta -> Desativa a conta do usuário
+- Redefinir senha -> Redefine a senha do usuário caso ele perca a senha
+- Mover Usuário -> Trocar o usuário de local
+
+
+.
+.
+.
+
+- Propriedades 
+	Geral, Endereços, 
+	Conta (Horário de Logon - Questões de Segurança - Nega todos os horários e permite apenas no horários de trabalho do usuário),
+	Fazer Logon em: Pode escolher quais máquinas o usuário pode fazer logon,
+	Vencimento de Conta (Vai sair de férias, serviço temporário etc)
+	

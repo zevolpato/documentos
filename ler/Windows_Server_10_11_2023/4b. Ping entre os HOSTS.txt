@@ -1,0 +1,24 @@
+Após configurar a rede 'interna' no Virtual Box e as configurações de IPs, faremos o teste de conectividade entre os hosts.
+
+1. ACESSE O CMD DO Windows Server e ping o Windows 10 (Cliente)
+	comando: ping 192.168.1.2
+
+2. Acesse o cmd do Windows 10 (Cliente) e ping o Windows Server
+	comando: 192.168.1.1
+
+Obs: O firewall do Windows 10 deverá ser configurado para permitir conexão de ping do Windows Server.
+
+Configuração de Firewall
+
+1. Painel de controle
+2. Pesquise por Firewall
+3. Configurações Avançadas
+4. Regra de Entrada
+5. Nova Regra
+6. ICMPv4
+.
+.
+.
+7. Permitir Conexão
+8. Nomear "Permitir Ping"
+9. Concluir

@@ -1,0 +1,737 @@
+React é um Framework Javascript desenvolvido pelo Facebook
+
+Específique um local no computador para o projeto
+	
+	- Crie uma pasta com o nome react em documentos
+
+Abra o Node.js command promt
+
+Instalação do npm
+	-> npm install -g npm
+
+
+1. Criação do Projeto
+	-> npx create-react-app nome_projeto
+
+	npx create-react-app app_react
+
+Acesse a pasta do projeto criado via node
+	-> cd app_react
+
+2. Execução do projeto
+	-npm start 
+
+2.1 Abra o Visual Studio Code e Vincule o Projeto React
+
+3. Arquivos Iniciais do Projeto 
+
+	O arquivo src/index.js possui um componente <App /> que está no arquivo app.js (É exatamente esse componente que é renderizado como pagina inicial do projeto).
+	Esse componente <App /> é o arquivo src/app.js com a function App 
+
+	
+	A function App() possui a codificação da página inicial do projeto
+
+	Altere a codificação dentro do "return (" para exibir olá mundo
+
+
+	***********************
+
+	import logo from './logo.svg';
+	import './App.css';
+
+	function App() {
+  	return (
+    		<div>
+      		<h2> Olá Mundo </h2>
+    		</div>
+  		);
+	}
+
+	export default App;
+
+
+-----------------
+
+4.1 Criação do Componente Main
+	1. Botão Direito em src -> new File 'Main.js'
+
+function Main() {
+    return (
+      <p> Olá Show</p>
+    );
+  }
+  
+  export default Main;
+
+......................
+
+Modificação no Arquivo Main.js e com estilização no CSS
+
+export default function Main() {
+  // Variável
+  let nome = "Professor Nelci Mariano";
+  // Objeto
+  let usuario = {
+    login: 'nelcijunior',
+    departamento: 'Tecnologia da Informação'
+  }
+  return (
+    <div>
+      <p className="title"> Olá, {nome} </p>
+      <p className="text"> Seu login: é {usuario.login} e seu Dpt é {usuario.departamento} </p>
+    </div>
+  );
+}
+
+
+---------------------------
+Novo Projeto 
+
+Criação do AppRoutes.js e importe no AppRoutes.js no index.js
+
+Criação de pages/Home/index.js
+
+	export default function Home(){
+    	return(
+        	<p> Home </p>
+    	)
+	}
+
+
+--------------------
+
+Instalação da Dependência -> react-router-dom
+
+
+	-> npm install react-router-dom
+
+--------------------
+
+Inserção das Rotas no AppRoutes.js
+
+
+import Home from './pages/Home'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+export default function AppRoutes() {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />}> </Route>
+            </Routes>
+        </BrowserRouter>
+    )
+}
+
+--------------------
+
+Criação 
+
+
+
+
+
+
+
+--------------------------
+4. Criação de uma function no arquivo app.js - Retorno da variável e de um objeto
+
+	***********************
+
+function App() {
+
+  const nome = "Nelci Mariano"
+  const usuario = {
+    idade: 35,
+    profissao: "Professor"
+  }
+  function formatarNome(nome){
+    return nome
+  }
+
+  function formatarDadosUsuario(usuario){
+    return ", " + usuario.idade + " anos de Idade e é " + usuario.profissao
+  }
+
+
+  return (
+    <div>
+      <h2> Olá, {formatarNome(nome)} {formatarDadosUsuario(usuario)}</h2>
+    </div>
+  );
+}
+
+export default App;
+
+
+-------------------------
+** OBS: Para não perder a codificação até aqui, renomei o arquivo app.js para app_1.js, pois terá alteração na codificação deste arquivo
+
+
+5. Criação de Componente Welcome
+
+	Altere a codificação no arquivo app.js
+
+	*********************
+
+	app.js
+	
+	import React from "react";
+
+	function App() {
+  
+  	return (
+    		<div>
+     			<Welcome />
+    		</div>
+  		);
+	}
+
+	//Criação do componente Welcome
+	function Welcome(){
+  		return <span> Bem Vindo ao componente Welcome</span>
+	}
+
+	export default App;
+
+
+Execute o comando npm start para executar o projeto
+
+----------------------------
+
+6. Criação de props no componente Welcome
+
+	*****************
+
+	app.js
+
+
+	import React from "react";
+
+	function App() {
+
+  	return (
+    		<div>
+     			<Welcome name="Nelci Mariano" />
+    		</div>
+  		);
+	}
+
+	//Criação do componente Welcome com a props
+	function Welcome(props){
+  		return <span> Bem Vindo ao componente Welcome {props.name}</span>
+	}
+
+	export default App;
+
+	
+
+
+----------------------------
+-------------------------
+** OBS: Para não perder a codificação até aqui, renomei o arquivo app.js para app_2.js, pois terá alteração na codificação deste arquivo
+
+7. Criação do Componente <Header> na pasta components/Header e importe do componente no arquivo app.js
+
+	-> src/components/Header/index.js
+
+
+	*****************
+
+	Header/index.js
+
+
+	import React from "react";
+
+	function Header(){
+    		return (
+        		<div> Cabeçalho </div>
+    		)
+	}
+
+	export default Header
+
+
+
+	
+	*****************
+	
+	app.js
+
+	import React from "react";
+	import Header from './components/Header'
+
+	function App() {
+
+  	return (
+    		<div>
+      		{/**As 2 formas abaixo podem ser usadas  */}
+      		{/*<Header></Header>*/}
+      		<Header />
+
+      		<h1>Site</h1>
+    	</div>
+  		);
+	}
+
+	export default App;
+
+
+----------------------------------------
+
+
+8. Criação do componente <Artigo /> e inserção no app.js
+
+	
+	-> src/components/Artigo/index.js
+
+
+	*****************
+
+	Artigo/index.js
+
+import React from "react";
+
+function Artigo(){
+    return (
+        <div> Artigo </div>
+    )
+}
+
+export default Artigo
+
+
+
+	*****************	
+
+
+	app.js
+
+import React from "react";
+import Header from './components/Header'
+import Artigo from './components/Artigo'
+
+function App() {
+
+  return (
+    <div>
+      <Header />
+      <Artigo />
+      <h1>Site</h1>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+-----------------------------------------
+9. Criação do componente MENU e Footer segue como a criação dos componentes anteriores
+
+-----------------------------------------
+
+10. Criação do Componente "Coment" e recebendo valores via props simulando os dados advindos de uma api
+
+
+*****************************
+
+Components/Comentario.js
+
+	
+
+import React from "react";
+
+function Comentario(props) {
+    return (
+        <div>
+            <p> Comentário </p>
+            <p> { props.text }</p>
+            <p> { props.author }</p>
+        </div>
+    )
+}
+
+export default Comentario
+
+
+*******************************
+
+app.js
+
+import React from "react";
+import Header from './components/Header'
+import Artigo from './components/Artigo'
+import Menu from './components/Menu'
+import Footer from './components/Footer'
+import Comentario from './components/Comentario'
+
+function App() {
+  
+  const coment = {
+    text: 'lorem text utils main royet',
+    author: {
+      name: 'Nelci'
+    }
+  }
+
+  return (
+    <div>
+      <Menu />
+      <Header />
+      <Artigo />
+      <h1>Site</h1>
+      <Comentario text={coment.text} author={coment.author.name} />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+--------------------------------------------------------------------------
+
+** OBS: Para não perder a codificação até aqui, renomei o arquivo app.js para app_3.js, pois terá alteração na codificação deste arquivo
+
+No arquivo app.js remova os imports dos componentes
+
+11. Criação do Hooks -> useState
+
+useState é um HOOK react que permite adicionar estado a um componente. No exemplo abaixo está sendo alterado o valor da variável nome ao clicar no botão Alterar
+
+************************
+
+app.js
+
+import React, { useState } from 'react';
+
+function App() {
+  const [nome, setNome] = useState('Nelci')
+
+  return (
+    <div>
+     <p>{nome}</p>
+     <button onClick={() => setNome('Professor Nelci Mariano')}>Alterar Nome</button>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+--------------------------------------------------------------------------
+
+** OBS: Para não perder a codificação até aqui, renomei o arquivo app.js para app_4_useState.js, pois terá alteração na codificação deste arquivo
+
+12. Criação do HOOK -> useEfect
+
+
+************************
+
+app.js
+
+import React, { useState, useEffect } from 'react';
+
+function App() {
+  const [produtoId, setprodutoId] = useState('')
+  const [produtoNome, setprodutoNome] = useState('')
+
+function buscarProduto(){
+  console.log("Buscar Produto")
+  setprodutoId(7)
+  setprodutoNome("Curso de React")
+  
+}
+
+  useEffect(() => {
+    buscarProduto()
+  }, [produtoId])
+
+  return (
+    <div>
+     <p>Listar Produto</p>
+     <p>{produtoId}</p>
+     <p>{produtoNome}</p>
+    
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+--------------------------------------------------------------------------
+
+** OBS: Para não perder a codificação até aqui, renomei o arquivo app.js para app_5_useEffect.js, pois terá alteração na codificação deste arquivo
+
+13. Enviar dados do formulário
+
+
+
+************************
+
+app.js
+
+import React, { useState } from 'react';
+
+function App() {
+
+    const [dados, setDados] = useState({
+      nome_usuario: '',
+      email_usuario: '' 
+
+    })
+    // Captura os dados do formulário -> irá passar par o name aquilo que receber no value (na hora que digitar o conteúdo no input do form)
+    const valorinput = e => setDados({...dados, [e.target.name]: e.target.value})
+    const cadUsuario = e => {
+      e.preventDefault() // Para não recarregar a página
+      console.log("Nome: " + dados.nome_usuario)
+      console.log("E-mail: " + dados.email_usuario)
+    }
+  return (
+    <div>
+      <p> Cadastrar </p>
+      <form onSubmit={cadUsuario}>
+        <label>Nome</label>
+        <input type="text" name="nome_usuario" onChange={valorinput} /> <br />
+
+        <label>E-mail</label>
+        <input type="text" name="email_usuario" onChange={valorinput} /> <br />
+
+        <button type="submit">Cadastrar</button>
+      </form>
+    
+    </div>
+  );
+}
+
+export default App;
+
+
+
+--------------------------------------------------------------------------
+
+** OBS: Para não perder a codificação até aqui, renomei o arquivo app.js para app_6_formulario.js, pois terá alteração na codificação deste arquivo
+
+14. Estilização CSS
+
+
+
+
+************************
+
+app.js
+
+
+import React from 'react';
+import './App.css';
+
+function App() {
+
+  const box = {
+    color: 'green',
+    fontSize: 25
+  }
+   
+  return (
+    <div>
+      <p style={{color: 'blue', fontSize: 25}}> Página um </p>
+      <p style={box}> Página dois </p>
+      <p className='curso'> Página três </p>
+      
+    </div>
+  );
+}
+
+export default App;
+
+
+
+************************
+
+App.css
+
+
+body {
+  background-color: #ccc;
+}
+
+.curso {
+  color: yellow; 
+  font-size: 25px
+}
+
+
+
+
+---------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------
+
+** OBS: Para não perder a codificação até aqui, renomei o arquivo app.js para app_7_estilização.js, pois terá alteração na codificação deste arquivo
+
+15. React Bootstrap
+
+
+https://react-bootstrap.netlify.app/docs/getting-started/introduction
+
+
+instalar a dependência
+
+	npm install react-bootstrap bootstrap
+
+
+**********************
+
+app.js
+
+
+
+
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+
+function App() {
+
+  return (
+    <div>
+     <Button variant="success">Success</Button>{' '}
+      
+    </div>
+  );
+}
+
+export default App;
+
+
+--------------------------------------------------------------------------
+
+** OBS: Para não perder a codificação até aqui, renomei o arquivo app.js para app_8_react_bootstrap.js, pois terá alteração na codificação deste arquivo
+
+16. Rotas no React
+
+https://reactrouter.com/en/main
+
+Instalação da dependencia
+
+	npm install react-router-dom
+
+---------------------------------------------------------------------------
+17. Requisição em arquivo json
+
+json/db.json
+
+{
+    "data": [
+        {
+            "id": 1,
+            "images": "/images/images-1.jpg"
+        },
+        {
+            "id": 2,
+            "images": "/images/images-1.jpg"
+        },
+    
+        {
+            "id": 5,
+            "images": "/images/images-1.jpg"
+        }
+    ]
+}
+
+
+******************
+
+
+Home/index.js
+
+
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import CardImage from 'components/CardImage';
+import dbjson from 'json/db.json';
+
+export default function Home() {
+    return (
+        <Container>
+            <Row>
+                {
+                    dbjson.data.map((json) => {
+                        return <CardImage {...json} key={json.id} />
+                    })
+                }
+            </Row>
+        </Container>
+    )
+}
+
+
+
+
+
+---------------------------------------------------------------------------
+18. Requisição com FECTH - https://my-json-server.typicode.com/professornelcimariano/lista_js/db
+
+
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import React, { useState, useEffect } from 'react';
+
+export default function Filmes() {
+    const [movies, setMovies] = useState([]);
+
+    useEffect(() => {
+        fetch('https://my-json-server.typicode.com/professornelcimariano/lista_js/db')
+        // fetch('http://localhost:4000/lista-cursos')
+            .then(response => response.json())
+            .then(data => {
+                setMovies(data.videos);
+            })
+            .catch(error => console.error('Erro ao carregar os vídeos:', error));
+    }, []);
+    return (
+        <Container>
+            <Row>
+                {movies.map(json => (
+                    <p>{json.id} - {json.titulo}</p>
+                ))}
+            </Row>
+        </Container>
+    )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

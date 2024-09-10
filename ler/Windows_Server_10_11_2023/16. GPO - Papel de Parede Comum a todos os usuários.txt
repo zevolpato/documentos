@@ -1,0 +1,18 @@
+Caso queira, crie uma pasta compartilhada entre o PC e a máquina virtual
+
+--------------------
+
+Crie uma pasta (Na máquina Virtual) no disco local C: "Arquivos" -> Compartilhamento avançado -> Compartilhar esta pasta -> Oculte o compartilhamento colocando um $ ao final do nome, na janela de compartilhamento avançado
+
+GPO - Gerenciamento de Política de Grupo
+Server Manager -> Ferramentas -> Gerenciamento de Política de Grupo
+Floresta dominio.local
+
+Domínios (Domains)
+
+botão direito no domínio ou na Unidade Organizacional - criar GPO - Nome: Papel de parede x  -> botão direito EDITAR GPO
+
+-> Configurações de Usuários -> políticas -> modelo administrativos -> Área de trabalho -> Active Desktop -> Papel de parede da Área de Trabalho -> Clique então em Habilitado -> Coloque o Caminho da pasta compartilhada (\\SERVER-AD\Wallpaper-GPO\papel-parede.jpg) e Aplicar -> Estila Ampliada -> Aplicar -> OK
+
+
+

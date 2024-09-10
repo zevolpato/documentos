@@ -1,0 +1,21 @@
+GPO - Gerenciamento de Política de Grupo
+Server Manager -> Ferramentas -> Gerenciamento de Política de Grupo
+Floresta dominio.local
+
+Domínios (Domains)
+
+botão direito no domínio - criar GPO - Nome: Proibir acesso ao painel de controle (Essa GPO será aplicada a todo  -> botão direito EDITAR GPO
+
+-> Configurações de Usuários -> políticas -> modelo administrativos -> painel de controle -> Proibir acesso ao Painel de controle e as configurações do PC -> (Por padrão estão como não configurado): Clique então em Habilitado -> Aplicar -> OK
+
+
+
+---------------------------------------------------
+
+LIBERANDO O ACESSO AO PAINEL DE CONTROLE DE UMA UNIDADE ORGANIZACIONAL ESPECÍFICA
+
+Botão direito do mouse sobre a unidade organizacional - Criar GPO - Nome: Liberar acesso ao painel  de controle -> botão direito EDITAR GPO
+
+-> Configurações de Usuários -> políticas -> modelo administrativos -> painel de controle -> Proibir acesso ao Painel de controle e as configurações do PC -> Clique então em Desabilitado -> Aplicar -> OK
+
+Após criar, editar -> Botão Direito do mouse sobre a GPO -> IMPOSTO - para que a GPO tenha prioridade!

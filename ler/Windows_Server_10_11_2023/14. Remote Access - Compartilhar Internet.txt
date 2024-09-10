@@ -1,0 +1,18 @@
+Configuração do Roteamento de Internet
+
+Install the Remote Access
+
+1. Server Manager
+2. Role and Feature
+3. Remote Access -> next -> next -> 
+4. Selecione DirectAcces, Routing -> next -> next -> next -> install -> close
+
+Habilitar o Remote Access
+
+1. Tools 
+2. Routing and Remote Access
+3. Botão Direito no Servidor (SERVER-AD) -> Configure and Enable Routing and Remote Access -> next -> Seleciona Network Address Translation (NAT) -> NEXT -> (NAT Internet Connection) Selecione a Placa de INTERNET -> next -> Finish~
+
+4. Aponte o Gatway do Windows 10 (Cliente) para o Server
+5. Efetue testes de conexão no Windows 10 (Cliente)
+6. Para os testes de conexão, Selecione o Server-AD com o botão direito do mouse -> All Tasks E desabilite a conexão

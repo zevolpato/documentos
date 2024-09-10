@@ -1,0 +1,8 @@
+Unidade Organizacional
+
+Server Manager -> Ferramentas -> Usuários e Computadores do Domínio
+-> Botão Direito do Mouse sobre o Domínio -> Novo -> Unidade Organizacional
+
+
+
+No Windows Server, uma unidade organizacional (OU) é uma estrutura de contêiner usada para organizar objetos em um domínio do Active Directory. Ela é uma parte fundamental da estrutura de diretórios no ambiente de rede do Windows Server e é usada para ajudar a gerenciar e delegar direitos e permissões em um domínio. 

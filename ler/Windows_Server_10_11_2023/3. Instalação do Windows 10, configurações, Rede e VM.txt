@@ -1,0 +1,24 @@
+Instalação Windows 10 - Versão PRÓ
+OBS: A versão HOME não é possível inserir no domínio
+---------------------------
+Usuário Local: nelci
+Pass: 3#####
+---------------------------
+Configurações
+
+
+1. Altere as configurações do Virtual Box Windows 10 - Configurações VM WS2019 
+-> Rede -> Adaptador 1 -> Conectado a Rede Interna > nome intnet
+-> Rede -> Adaptador 2 -> Modo Bridge -> Escolha a placa (Wifi ou ETHERNET)
+
+
+2. Windows 10- Configuração de IP
+	IP: 192.168.1.2
+	Mask: 255.255.255.0
+	Gatway
+
+	DNS: 192.168.1.1
+
+3. Alteração do Nome da Máquina no Windows 10
+
+	Abra o Explorador de arquivos -> botão direito em meu computador -> propriedades -> Configurações avançadas do sistema -> Nome do Computador -> Alterar

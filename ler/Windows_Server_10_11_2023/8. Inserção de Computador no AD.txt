@@ -1,0 +1,8 @@
+
+
+Botão Direito em "Este Computador" -> Propriedades -> Configurações avançadas do sistema -> Renomear o computador, clicar no botão ALTERAR -> Membro de Domínio -> Colocar o nome do AD
+
+
+obs: Problemas de DNS ao inserir no domínio, pode ser resolvido com a criação da zona dns
+
+A Zona DNS (Domain Name System) no Windows Server se refere a uma parte da configuração de um servidor DNS que especifica como um domínio específico deve ser resolvido em endereços IP ou em outros tipos de registros DNS. Em um servidor DNS do Windows Server, você pode configurar várias zonas DNS para controlar a resolução de nomes de domínio.
